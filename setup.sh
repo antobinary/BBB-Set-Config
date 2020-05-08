@@ -1,5 +1,14 @@
 #!/bin/bash
 
+wget https://github.com/CVMsnc/bigbluebutton/releases/latest/download/bigbluebutton-html5.tar.gz
+tar -xvf bigbluebutton-html5.tar.gz
+rm bigbluebutton-html5.tar.gz
+cp /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml settings.yml
+rm -rf /usr/share/meteor/bundle
+mv bundle /usr/share/meteor/
+rm /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
+mv settings.yml /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
+
 TARGET=/usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 
 echo "Setting html5 client settings..."
