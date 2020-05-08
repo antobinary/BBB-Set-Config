@@ -4,10 +4,15 @@ wget https://github.com/CVMsnc/bigbluebutton/releases/latest/download/bigbluebut
 tar -xvf bigbluebutton-html5.tar.gz
 rm bigbluebutton-html5.tar.gz
 cp /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml settings.yml
+cp /usr/share/meteor/bundle/mongo* .
+cp /usr/share/meteor/bundle/systemd_start.sh .
 rm -rf /usr/share/meteor/bundle
 mv bundle /usr/share/meteor/
 rm /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 mv settings.yml /usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
+mv mongo* /usr/share/meteor/bundle
+mv systemd_start.sh /usr/share/meteor/bundle
+npm --prefix /usr/share/meteor/bundle/programs/server install /usr/share/meteor/bundle/programs/server
 
 TARGET=/usr/share/meteor/bundle/programs/server/assets/app/config/settings.yml
 
