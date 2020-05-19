@@ -22,6 +22,7 @@ yq w -i $TARGET public.app.appName "LiveMeeting"
 yq w -i $TARGET public.app.copyright "©2020 CVM snc"
 yq w -i $TARGET public.app.helpLink "https://livemeeting.tech/"
 yq w -i $TARGET public.app.branding.displayBrandingArea true
+yq w -i $TARGET public.app.preloadNextSlides 2
 yq w -i $TARGET public.presentation.uploadSizeMax 200000000
 
 echo "Setting default messages..."
