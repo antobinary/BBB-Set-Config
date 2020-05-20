@@ -27,7 +27,7 @@ yq w -i $TARGET public.presentation.uploadSizeMax 200000000
 
 echo "Setting default messages..."
 sed -i "s@^defaultWelcomeMessage=.*@defaultWelcomeMessage=Benvenuto in <b>%%CONFNAME%%</b>!<br><br>Per unirti alla chiamata clicca sull'icona del telefono.@g" /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
-sed -i "s@^defaultWelcomeMessageFooter=.*@defaultWelcomeMessageFooter=Questo servizio \&egrave; offerto da <a href=\"https://cvm.it/\" target=\"_blank\"><u>CVM</u></a>.@g" /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
+sed -i "s@^defaultWelcomeMessageFooter=.*@defaultWelcomeMessageFooter=Questo servizio \&egrave; offerto da <a href=\"https://livemeeting.tech/\" target=\"_blank\"><u>LiveMeeting</u></a>.@g" /usr/share/bbb-web/WEB-INF/classes/bigbluebutton.properties
 
 chown meteor:meteor $TARGET
 
